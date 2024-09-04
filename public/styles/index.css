@@ -28,16 +28,17 @@ nav {
 }
 
 nav a {
-    margin: 50px;
+    margin: 0 20px;
     text-decoration: none;
     color: var(--font-color-nav);
+    font-size: 1em;
 }
 
 button {
     width: 120px;
     height: 50px;
-    margin: 15px 50px;
-    font-size: .9em;
+    margin: 15px 20px;
+    font-size: 0.9em;
     color: var(--font-color-nav);
     background-color: var(--background-button-color);
     border: 1px solid black;
@@ -50,7 +51,8 @@ button {
 
 .container {
     display: flex;
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     height: 550px;
     margin: 10px auto;
     justify-content: center;
@@ -87,26 +89,29 @@ button {
 
 .form-container {
     display: flex;
-    width: 800px;
-    height: 400px;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
     margin: 30px auto;
     justify-content: center;
     align-items: center;
     background-color: #334464;
     border: 3px solid black;
     flex-direction: column;
-    color: black
+    color: black;
+    padding: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 form, input, label {
     margin: 5px;
     font-size: 1.2em;
-    color: black
+    color: black;
 }
 
 input {
@@ -118,10 +123,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 75px;
-    margin-top: 118px;
+    margin-top: 30px;
     background-color: var(--background-nav-footer-color);
     color: white;
 }
+
 footer h1 {
     margin: 25px;
     text-align: center;
@@ -157,4 +163,67 @@ input:hover {
 svg:hover {
     background-color: rgb(244, 244, 244);
     border-radius: 5%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 0.9em;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-container {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    footer h1, .svg-container {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav a {
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+        margin: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
 }
